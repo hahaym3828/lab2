@@ -8,31 +8,31 @@ if (computerChoice < 0.34) {
     computerChoice = "scissors";
 }
 
-var compare = function(choice1, choice2) {
-    if(choice1 === choice2) {
-    return "The result is a tie!";
+var compare = function(userChoice, computerChoice) {
+    if(userChoice == computerChoice) {
+    return "Draw";
 }
-if(choice1 === "rock") {
-    if(choice2 === "scissors") {
-        return "rock wins";
+if(userChoice == "rock") {
+    if(computerChoice == "scissors") {
+        return "user" + " "+"wins";
     } else {
-        return "paper wins";
+        return "computer"+" "+ "wins";
     }
 }
-if(choice1 === "paper") {
-    if(choice2 === "rock") {
-        return "paper wins";
+if(userChoice == "paper") {
+    if(computerChoice == "rock") {
+        return "user"+" "+ "wins";
     } else {
-        if(choice2 === "scissors") {
-            return "scissors wins";
+        if(computerChoice == "scissors") {
+            return "computer" + " "+"wins";
     }
 }
-if(choice1 === "scissors") {
-    if(choice2 === "rock") {
-        return "rock wins";
+if(userChoice == "scissors") {
+    if(computerChoice == "rock") {
+        return "computer" + " "+"wins";
     } else {
-        if(choice2 === "paper") {
-            return "scissors wins";
+        if("computer" == "paper") {
+            return "user"+" "+ "wins";
         }
     }
 }
@@ -40,4 +40,5 @@ if(choice1 === "scissors") {
 };
 console.log("User Choice: " + userChoice);
 console.log("Computer Choice: " + computerChoice);
+compare(userChoice, computerChoice);
 compare(userChoice, computerChoice);
